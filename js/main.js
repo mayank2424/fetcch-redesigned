@@ -13,6 +13,26 @@ $(document).ready(function(){
 //       }
 //   });
  // });
+//  $(document).on('scroll', function (e) {
+//     $('.navbar').css('opacity', ($(document).scrollTop() / 500));
+// });
+
+$(document).ready(function(){
+  $(window).scroll(function(){
+    var scroll = $(window).scrollTop();
+      if (scroll > 300) {
+        $(".navbar-default").css("background" , "white");
+        $(".navbar-default").css("box-shadow" , "0 0  30px black");
+        $(".navbar-default a").css("color" , "black");
+      }
+
+      else{
+          $(".navbar-default").css("background" , "transparent");
+          $(".navbar-default").css("box-shadow" , "0 0 0px");
+          $(".navbar-default a").css("color" , "white"); 
+      }
+  })
+})
  // $('body').scrollspy({target: "navbar-example", offset: 50});
  $('#bs-example-navbar-collapse-1 a').on('click', function(event){
  	if (this.hash !== "") {
